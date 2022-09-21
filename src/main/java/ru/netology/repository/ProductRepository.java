@@ -22,14 +22,14 @@ public class ProductRepository {
         Product[] tmp = new Product[products.length - 1];
         int copyToIndex = 0;
         for (Product product : products) {
-                if (product.getId() != id) {
-                    tmp[copyToIndex] = product;
-                    copyToIndex++;
-                }
-            }products = tmp;
+            if (product.getId() != id) {
+                tmp[copyToIndex] = product;
+                copyToIndex++;
 
+            }
 
-
+        }
+        products = tmp;
 
 
     }

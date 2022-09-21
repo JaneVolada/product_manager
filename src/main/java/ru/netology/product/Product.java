@@ -1,7 +1,7 @@
 package ru.netology.product;
 
 public class Product {
-    protected  int id;
+    protected int id;
     protected String productType;
     protected String nameProduct;
     protected int price;
