@@ -80,6 +80,17 @@ public class ProductRepositoryTest {
         Product[] expected = {};
         Product[] actual = repository.findAll();
         Assertions.assertArrayEquals(expected, actual);
+    }
+
+        @Test
+        public void removeByIdNotExistent() {
+            ProductRepository repository = new ProductRepository();
+            repository.save(book1);
+            repository.save(book2);
+            repository.save(book2);
+            Assertions.assertThrows(NotFoundException.class, () -> {
+                repository.removeById(100);
+            });
 
     }
 
